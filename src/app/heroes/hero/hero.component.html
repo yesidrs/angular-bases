@@ -1,17 +1,19 @@
 <div class="card">
-  <h1>Spiderman</h1>
+  <h1>{{ superhero }}</h1>
   <dl>
     <dt>Name:</dt>
-    <dd>Peter Parker</dd>
+    <dd>{{ name }}</dd>
     <dt>Age:</dt>
-    <dd>20</dd>
-    <dt>Method:</dt>
-    <dd>any method</dd>
+    <dd>{{ age }}</dd>
+    <dt>Description:</dt>
+    <dd>{{ getHeroDescription() }}</dd>
     <dt>Capitalized:</dt>
-    <dd>name capitalized</dd>
+    <dd>{{ capitalizeName }}</dd>
   </dl>
   <div class="card__buttons">
-    <button class="btn">Change name</button>
-    <button class="btn">Change age</button>
+    <button class="btn btn-primary" *ngIf="superhero !== 'Ironman'" (click)="changeHero()">
+      Change hero
+    </button>
+    <button class="btn btn-alert" (click)="reset()">Reset</button>
   </div>
 </div>
