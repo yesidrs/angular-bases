@@ -3,9 +3,14 @@
   box-sizing: border-box;
   font-family: poppins, sans-serif;
 }
-
 body {
   background-color: #1e1e28;
   color: #fff;
   font-family: poppins, sans-serif;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }
