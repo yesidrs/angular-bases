@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-heroes-hero',
@@ -6,16 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent {
-  superhero = 'Spiderman';
-  name = 'Peter Parker';
-  age = 16;
+  @Input() superhero = 'Spiderman';
+  @Input() name = 'Peter Parker';
+  @Input() age = 16;
+  @Input() description = '';
 
   get capitalizeName(): string {
     return this.superhero.toUpperCase();
   }
 
   getHeroDescription(): string {
-    return `${this.name} is ${this.age} years old`;
+    return this.description;
   }
 
   changeHero(): void {
