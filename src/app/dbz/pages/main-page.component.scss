@@ -1,0 +1,15 @@
+section {
+  background-color: #1b1923;
+  display: flex;
+  width: 100%;
+  padding: 50px;
+  border-radius: 30px;
+
+  app-dbz-list {
+    width: 50%;
+  }
+
+  app-dbz-add-character {
+    width: 50%;
+  }
+}
