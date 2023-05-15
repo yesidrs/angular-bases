@@ -32,33 +32,8 @@
     width: 100%;
     padding: 10px;
 
-    .btn {
-      border: none;
-      border-radius: 5px;
-      color: #1b1923;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 500;
+    button {
       margin: 5px;
-      padding: 10px;
-      width: 100%;
-      transition: all 0.3s ease-in-out;
-
-      &-primary {
-        background-color: #aedfaa;
-
-        &:hover {
-          background-color: #86ac83;
-        }
-      }
-
-      &-alert {
-        background-color: #e38c8f;
-
-        &:hover {
-          background-color: #b06c6e;
-        }
-      }
     }
   }
 }
