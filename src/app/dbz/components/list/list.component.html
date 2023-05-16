@@ -1,7 +1,9 @@
 <div>
-    <h2>List</h2>
-    <ul>
-        <li>Krillin - 500</li>
-        <li>Krillin - 500</li>
-    </ul>
+  <h2>List</h2>
+  <ul *ngFor="let character of characters; index as i">
+    <li>
+      <span>{{ i + 1 }}.</span> {{ character.name }} - <strong>Power:</strong>
+      {{ character.power }}
+    </li>
+  </ul>
 </div>
