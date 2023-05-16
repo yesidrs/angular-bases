@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { Character } from '../../interfaces/dbz.interface';
 
 @Component({
   selector: 'app-dbz-add-character',
@@ -6,7 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-character.component.scss'],
 })
 export class AddCharacterComponent {
-  addCharacter() {
-    console.log('Agregando personaje');
+  character: Character = {
+    name: '',
+    power: '',
+  };
+
+  emitCharacter() {
+    console.log(this.character);
+    this.character.name = '';
+    this.character.power = '';
   }
 }
