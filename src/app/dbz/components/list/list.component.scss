@@ -4,6 +4,12 @@ ul {
   li {
     border: 1px solid #ccc;
     border-radius: 30px;
+    color: var(--light-color);
     padding-left: 10px;
+    margin-bottom: 5px;
+
+    span {
+      color: var(--alert-color);
+    }
   }
 }
