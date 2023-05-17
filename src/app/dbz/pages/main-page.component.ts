@@ -16,4 +16,8 @@ export class MainPageComponent {
   addNewCharacter(character: Character) {
     this.characters.push(character);
   }
+
+  deleteCharacter(index: number) {
+    this.characters.splice(index, 1);
+  }
 }

@@ -9,7 +9,10 @@ import { Character } from '../../interfaces/dbz.interface';
 export class ListComponent {
   @Input() characters: Character[] = [];
 
-  removeCharacter(index: number) {
-   this.characters = this.characters.filter((character, i) => i !== index);
+  @Output()
+  onDelete: EventEmitter<number> = new EventEmitter();
+
+  onDeleteCharacter(index: number) {
+    this.onDelete.emit(index);
   }
 }
