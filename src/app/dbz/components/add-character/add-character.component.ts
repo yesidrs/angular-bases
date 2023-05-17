@@ -11,6 +11,7 @@ export class AddCharacterComponent {
   onEmitCharacter: EventEmitter<Character> = new EventEmitter();
 
   character: Character = {
+    id: '',
     name: '',
     power: 0,
   };
@@ -24,6 +25,7 @@ export class AddCharacterComponent {
     this.onEmitCharacter.emit(this.character);
 
     this.character = {
+      id: '',
       name: '',
       power: 0,
     };

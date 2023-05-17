@@ -6,7 +6,7 @@
         <span>{{ i + 1 }}.</span> {{ character.name }} - <strong>Power:</strong>
         {{ character.power }}
       </div>
-      <button class="btn-close" (click)="onDeleteCharacter(i)">x</button>
+      <button class="btn-close" (click)="onDeleteCharacter(character.id)">x</button>
     </li>
   </ul>
 </div>
