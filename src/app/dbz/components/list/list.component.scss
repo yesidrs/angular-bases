@@ -3,23 +3,32 @@ ul {
 
   li {
     border: 1px solid #ccc;
-    border-radius: 30px;
+    border-radius: 5px;
     color: var(--light-color);
-    padding-left: 10px;
+    padding: 10px 0px 10px 10px;
     margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     span {
       color: var(--alert-color);
     }
 
-    .close-btn {
-      border: 1px solid var(--alert-color);
+    .btn-close {
+      border: none;
+      border-radius: 2px;
+      background-color: var(--alert-color);
+      color: #fff;
       cursor: pointer;
-      display: block;
-      float: right;
-      margin-right: 15px;
-      padding: 0px 5px;
-      text-align: center;
+      font-weight: bold;
+      margin-right: 10px;
+      padding: 3px 10px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: var(--alert-color-hover);
+      }
     }
   }
 }
