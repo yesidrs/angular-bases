@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Character } from '../../interfaces/dbz.interface';
 
 @Component({
@@ -7,14 +7,25 @@ import { Character } from '../../interfaces/dbz.interface';
   styleUrls: ['./add-character.component.scss'],
 })
 export class AddCharacterComponent {
+  @Output()
+  onEmitCharacter: EventEmitter<Character> = new EventEmitter();
+
   character: Character = {
     name: '',
-    power: '',
+    power: 0,
   };
 
   emitCharacter() {
-    console.log(this.character);
-    this.character.name = '';
-    this.character.power = '';
+    if (this.character.name.length === 0 || this.character.power === 0) {
+      alert('Please enter a name and power');
+      return;
+    }
+
+    this.onEmitCharacter.emit(this.character);
+
+    this.character = {
+      name: '',
+      power: 0,
+    };
   }
 }

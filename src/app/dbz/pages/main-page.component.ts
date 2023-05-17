@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Character } from '../interfaces/dbz.interface';
 
 @Component({
@@ -8,8 +8,12 @@ import { Character } from '../interfaces/dbz.interface';
 })
 export class MainPageComponent {
   characters: Character[] = [
-    { name: 'Goku', power: '15000' },
-    { name: 'Vegeta', power: '8500' },
-    { name: 'Krillin', power: '5000'}
+    { name: 'Goku', power: 15000 },
+    { name: 'Vegeta', power: 8500 },
+    { name: 'Krillin', power: 5000 },
   ];
+
+  addNewCharacter(character: Character) {
+    this.characters.push(character);
+  }
 }

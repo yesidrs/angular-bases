@@ -2,5 +2,5 @@
 
 <section>
   <app-dbz-list [characters]="characters"></app-dbz-list>
-  <app-dbz-add-character></app-dbz-add-character>
+  <app-dbz-add-character (onEmitCharacter)="addNewCharacter($event)"></app-dbz-add-character>
 </section>

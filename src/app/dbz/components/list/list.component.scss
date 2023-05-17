@@ -11,5 +11,15 @@ ul {
     span {
       color: var(--alert-color);
     }
+
+    .close-btn {
+      border: 1px solid var(--alert-color);
+      cursor: pointer;
+      display: block;
+      float: right;
+      margin-right: 15px;
+      padding: 0px 5px;
+      text-align: center;
+    }
   }
 }
