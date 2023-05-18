@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Character } from '../interfaces/dbz.interface';
 import { DbzService } from '../services/dbz.service';
+import { Character } from '../interfaces/dbz.interface';
 
 @Component({
   selector: 'app-dbz-main-page',
@@ -8,5 +8,17 @@ import { DbzService } from '../services/dbz.service';
   styleUrls: ['./main-page.component.scss'],
 })
 export class MainPageComponent {
-  constructor(public dbzService: DbzService) {}
+  constructor(private dbzService: DbzService) {}
+
+  get characters(): Character[] {
+    return this.dbzService.characters;
+  }
+
+  newCharacter(character: Character) {
+    this.dbzService.onNewCharacter(character);
+  }
+
+  deleteCharacter(id: string) {
+    this.dbzService.onDeleteCharacter(id);
+  }
 }
