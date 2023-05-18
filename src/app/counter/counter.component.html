@@ -1,17 +1,20 @@
-<div class="container">
-  <h1>{{ title }}</h1>
-  <div class="container__buttons">
-    <button class="btn" (click)="decrement()">-</button>
-    <div class="container__number">
-      <p>{{ number }}</p>
+<section>
+  <h1>Counter</h1>
+  <div class="container">
+    <h2>{{ title }}</h2>
+    <div class="container__buttons">
+      <button class="btn" (click)="decrement()">-</button>
+      <div class="container__number">
+        <p>{{ number }}</p>
+      </div>
+      <button class="btn" (click)="increment()">+</button>
     </div>
-    <button class="btn" (click)="increment()">+</button>
+    <div>
+      <button class="btn--reset" (click)="reset()">Reset</button>
+    </div>
+    <div class="input-group">
+      <label for="increase">Do you want increase by other number?</label>
+      <input id="increase" type="number" [(ngModel)]="increase" />
+    </div>
   </div>
-  <div>
-    <button class="btn--reset" (click)="reset()">Reset</button>
-  </div>
-  <div class="input">
-    <label for="increase">Do you want increase by other number?</label>
-    <input id="increase" type="number" [(ngModel)]="increase" step="1" >
-  </div>
-</div>
+</section>

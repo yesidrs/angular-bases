@@ -10,8 +10,8 @@
   --primary-color: #aedfaa;
 }
 
-
 // Global styles
+// Tags
 * {
   box-sizing: border-box;
   font-family: poppins, sans-serif;
@@ -23,37 +23,51 @@ body {
   margin: auto;
   width: 90%;
 
+  h1 {
+    font-size: 30px;
+  }
+
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-  .btn {
-    border: none;
-    border-radius: 5px;
-    color: #1b1923;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 10px;
-    width: 100%;
-    transition: all 0.3s ease-in-out;
-
-    &-primary {
-      background-color: #aedfaa;
-
-      &:hover {
-        background-color: #86ac83;
-      }
+  input[type="number"] {
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
+  }
+}
 
-    &-alert {
-      background-color: #e38c8f;
+// Classes
+.btn {
+  border: none;
+  border-radius: 5px;
+  color: #1b1923;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
 
-      &:hover {
-        background-color: #b06c6e;
-      }
+  &-primary {
+    background-color: #aedfaa;
+
+    &:hover {
+      background-color: #86ac83;
+    }
+  }
+
+  &-alert {
+    background-color: #e38c8f;
+
+    &:hover {
+      background-color: #b06c6e;
     }
   }
 }

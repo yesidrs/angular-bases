@@ -1,10 +1,13 @@
-<ul class="cards">
-  <li *ngFor="let hero of heroes">
-    <app-heroes-hero
-      [superhero]="hero.alias"
-      [name]="hero.name"
-      [age]="hero.age"
-      [description]="hero.description"
-    ></app-heroes-hero>
-  </li>
-</ul>
+<section>
+  <h1>Heroes List</h1>
+  <ul class="cards">
+    <li *ngFor="let hero of heroes">
+      <app-heroes-hero
+        [superhero]="hero.alias"
+        [name]="hero.name"
+        [age]="hero.age"
+        [description]="hero.description"
+      ></app-heroes-hero>
+    </li>
+  </ul>
+</section>

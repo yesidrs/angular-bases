@@ -1,15 +1,20 @@
 section {
   background-color: #1b1923;
   display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 50px;
   border-radius: 30px;
 
+  @media (min-width: 820px) {
+    flex-direction: row;
+  }
+
   app-dbz-list {
-    width: 50%;
+    width: 100%;
   }
 
   app-dbz-add-character {
-    width: 50%;
+    width: 100%;
   }
 }

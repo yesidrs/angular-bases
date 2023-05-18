@@ -1,5 +1,9 @@
 ul {
-  width: 90%;
+  width: 100%;
+
+  @media (min-width: 820px) {
+    width: 90%;
+  }
 
   li {
     border: 1px solid #ccc;
