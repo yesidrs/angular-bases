@@ -1,6 +1,7 @@
 # Bases
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+
 Result: [Github Pages](https://yesiddev.github.io/angular-bases)
 
 ## Development server
